@@ -6,7 +6,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
-public class PagamentoServiceTest {
+public class AiServiceTest {
 
     @InjectMocks
     private AiService aiService;
