@@ -51,10 +51,12 @@ public class ProdutoService implements OperacaoObservable {
         return produtoRepository.findById(id);
     }
 
-    public void deletar(Long id) {
+    public boolean deletar(Long id) {
         if (produtoRepository.existsById(id)) {
             registrarOperacao(id, TipoOperacao.DELETAR);
             produtoRepository.deleteById(id);
+            return true;
         }
+        return  false;
     }
 }
